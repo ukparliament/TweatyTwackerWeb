@@ -1,0 +1,49 @@
+﻿@using System.Linq
+@model Treaty
+
+@{
+    ViewData["Title"] = "Treaties";
+}
+
+<section>
+    <div class="container">
+        @{
+            var title = Model.Name;
+            var laidDate = Model.LaidDate.ToString("yyyy-MM-dd");
+            var LeadOrganisation = Model.LeadOrganisation;
+            var Series = Model.Series;
+            var Id = Model.Id;
+            var WorkPackageId = Model.WorkPackageId;
+            var IsTweeted = Model.IsTweeted;
+
+                <h1>@title</h1>
+
+        <table>
+            <tr>
+                <th>Date laid:</th>
+                <td>@laidDate</td>
+            </tr>
+            <tr>
+                <th>Lead organisation:</th>
+                <td>@LeadOrganisation</td>
+            </tr>
+            <tr>
+                <th>Series:</th>
+                <td>@Series</td>
+            </tr>
+            <tr>
+                <th>Instrument URI:</th>
+                <td>@Id</td>
+            </tr>
+            <tr>
+                <th>Work package URI:</th>
+                <td>@WorkPackageId</td>
+            </tr>
+            <tr>
+                <th>Tweeted:</th>
+                <td>@IsTweeted</td>
+            </tr>
+        </table>
+        }
+    </div>
+</section>
